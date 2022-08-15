@@ -10,7 +10,7 @@ M.setup = function(opts)
 end
 
 --- Global function for command!
-_G.Stdheader = function()
+_G.StrHeader = function()
 	local filetype = bo.filetype
 	-- Error handling
 	if config.ft[filetype] == nil then
@@ -33,7 +33,7 @@ _G.Stdheader = function()
 	end
 end
 
-_G.Stdheader_update = function()
+_G.StrHeader_update = function()
 	local filetype = bo.filetype
 	-- Error handling
 	if config.ft[filetype] == nil then
@@ -56,6 +56,6 @@ _G.Stdheader_update = function()
 	local ft_config = config.ft[filetype]
 	require("header.header").update(ft_config)
 end
-api.nvim_command([[command! Stdheader lua Stdheader()]])
-api.nvim_command([[autocmd BufWritePre * lua Stdheader_update()]])
+api.nvim_command([[command! StrHeader lua StrHeader()]])
+api.nvim_command([[autocmd BufWritePre * lua StrHeader_update()]])
 return M
