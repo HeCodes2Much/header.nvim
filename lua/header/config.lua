@@ -1,10 +1,12 @@
 ---@class Config User config defaults
----@field user string: default user
----@field mail string: default mail
+---@field username string: default username
+---@field email string: default email
+---@field git string: default git_url
 ---@field ft table: filetype configuration
 local Config = {
-	user = "username",
-	mail = "email@gmail.com",
+	username = "username",
+	email = "email@gmail.com",
+  git = "git_url",
 	ft = {
 		c = {
 			start_comment = "/*",
@@ -48,8 +50,9 @@ setmetatable(Config, {
 ---@param opts table
 function Config:set(opts)
 	self.__index = self
-	self.user = opts.user or "username"
-	self.mail = opts.mail or "email@gmail.com"
+	self.username = opts.username or "username"
+	self.email = opts.email or "email@gmail.com"
+  self.git = opts.git or "git_url"
 	if opts.ft ~= nil then
 		self.ft = vim.tbl_deep_extend("force", self.ft, opts.ft)
 	end
