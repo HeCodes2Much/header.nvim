@@ -62,7 +62,7 @@ header.update = function(ft_config)
 		fn.setline(
 			4,
 			string.format(
-				"%2s   %s%s:+:      :+:    :+:   %2s",
+				"%2s   %s%s                      %2s",
 				ft_config.start_comment,
 				filename,
 				string.rep(" ", SPACES_AFTER_FILENAME),
@@ -73,7 +73,7 @@ header.update = function(ft_config)
 		fn.setline(
 			9,
 			string.format(
-				"%2s   Updated: %19s by %s%s###   ###########       %2s",
+				"%2s   Updated: %19s by %s%s                   %2s",
 				ft_config.start_comment,
 				fn.strftime("%d %b %Y, %I:%M:%S %P"),
 				user,
