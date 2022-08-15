@@ -25,8 +25,8 @@ local function format_header(ft_config)
 		ft_config.start_comment, ft_config.end_comment,
 		ft_config.start_comment, user, mail, string.rep(' ', SPACES_AFTER_EMAIL), ft_config.end_comment,
 		ft_config.start_comment, ft_config.end_comment,
-		ft_config.start_comment, fn.strftime("%Y/%m/%d %H:%M:%S"), user, string.rep(' ', SPACES_AFTER_CREATED), ft_config.end_comment,
-		ft_config.start_comment, fn.strftime("%Y/%m/%d %H:%M:%S"), user, string.rep(' ', SPACES_AFTER_UPDATED), ft_config.end_comment,
+		ft_config.start_comment, fn.strftime("%d %b %Y, %I:%M:%S %P"), user, string.rep(' ', SPACES_AFTER_CREATED), ft_config.end_comment,
+		ft_config.start_comment, fn.strftime("%d %b %Y, %I:%M:%S %P"), user, string.rep(' ', SPACES_AFTER_UPDATED), ft_config.end_comment,
 		ft_config.start_comment, ft_config.end_comment,
 		ft_config.start_comment, string.rep(ft_config.fill_comment, 74), ft_config.end_comment
 	)
@@ -75,7 +75,7 @@ header.update = function(ft_config)
 			string.format(
 				"%2s   Updated: %19s by %s%s###   ###########       %2s",
 				ft_config.start_comment,
-				fn.strftime("%Y/%m/%d %H:%M:%S"),
+				fn.strftime("%d %b %Y, %I:%M:%S %P"),
 				user,
 				string.rep(" ", SPACES_AFTER_UPDATED),
 				ft_config.end_comment

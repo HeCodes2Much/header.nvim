@@ -2,19 +2,19 @@ local values = {}
 
 values.header = [[%2s %74s %2s
 %2s                                                                            %2s
-%2s                                                        :::      ::::::::   %2s
-%2s   %s%s:+:      :+:    :+:   %2s
-%2s                                                    +:+ +:+         +:+     %2s
-%2s   By: %s <%s>%s+#+  +:+       +#+        %2s
-%2s                                                +#+#+#+#+#+   +#+           %2s
-%2s   Created: %19s by %s%s#+#    #+#             %2s
-%2s   Updated: %19s by %s%s###   ###########       %2s
+%2s                                                                            %2s
+%2s   %s%s                           %2s
+%2s                                                                            %2s
+%2s   By: %s <%s>%s                               %2s
+%2s                                                                            %2s
+%2s   Created: %19s by %s%s                       %2s
+%2s   Updated: %19s by %s%s                       %2s
 %2s                                                                            %2s
 %2s %74s %2s
 ]]
 
-values.length = 80
-values.margin = 5
+values.length = 85
+values.margin = 10
 
 --- Makes constants read-only by using lua `setmetatable`
 -- @param tbl Table with all contants values
