@@ -3,8 +3,8 @@
 ---@field mail string: default mail
 ---@field ft table: filetype configuration
 local Config = {
-	user = "marvin",
-	mail = "marvin@42.fr",
+	user = "username",
+	mail = "email@gmail.com",
 	ft = {
 		c = {
 			start_comment = "/*",
@@ -48,8 +48,8 @@ setmetatable(Config, {
 ---@param opts table
 function Config:set(opts)
 	self.__index = self
-	self.user = opts.user or "marvin"
-	self.mail = opts.user or "42.fr"
+	self.user = opts.user or "username"
+	self.mail = opts.user or "email@gmail.com"
 	if opts.ft ~= nil then
 		self.ft = vim.tbl_deep_extend("force", self.ft, opts.ft)
 	end
