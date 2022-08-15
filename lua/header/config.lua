@@ -49,7 +49,7 @@ setmetatable(Config, {
 function Config:set(opts)
 	self.__index = self
 	self.user = opts.user or "username"
-	self.mail = opts.user or "email@gmail.com"
+	self.mail = opts.mail or "email@gmail.com"
 	if opts.ft ~= nil then
 		self.ft = vim.tbl_deep_extend("force", self.ft, opts.ft)
 	end

@@ -1,6 +1,5 @@
 local values = {}
 
---- École 42 ASCII art.
 values.header = [[%2s %74s %2s
 %2s                                                                            %2s
 %2s                                                        :::      ::::::::   %2s
@@ -9,7 +8,7 @@ values.header = [[%2s %74s %2s
 %2s   By: %s <%s>%s+#+  +:+       +#+        %2s
 %2s                                                +#+#+#+#+#+   +#+           %2s
 %2s   Created: %19s by %s%s#+#    #+#             %2s
-%2s   Updated: %19s by %s%s###   ########.fr       %2s
+%2s   Updated: %19s by %s%s###   ###########       %2s
 %2s                                                                            %2s
 %2s %74s %2s
 ]]

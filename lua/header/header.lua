@@ -73,7 +73,7 @@ header.update = function(ft_config)
 		fn.setline(
 			9,
 			string.format(
-				"%2s   Updated: %19s by %s%s###   ########.fr       %2s",
+				"%2s   Updated: %19s by %s%s###   ###########       %2s",
 				ft_config.start_comment,
 				fn.strftime("%Y/%m/%d %H:%M:%S"),
 				user,
