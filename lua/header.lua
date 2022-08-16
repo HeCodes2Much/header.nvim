@@ -56,6 +56,13 @@ _G.StrHeader_update = function()
 	local ft_config = config.ft[filetype]
 	require("header.header").update(ft_config)
 end
-api.nvim_command([[command! StrHeader lua StrHeader()]])
-api.nvim_command([[autocmd BufWritePre * lua StrHeader_update()]])
+api.nvim_create_user_command("StrHeader", function() StrHeader() end, {})
+api.nvim_create_user_command("StrHeaderUpdate", function() StrHeader_update() end, {})
+
+api.nvim_create_autocmd("BufWritePre", {
+	group = vim.api.nvim_create_augroup("_update", { clear = true }),
+	pattern = "*",
+  command = "StrHeaderUpdate"
+})
+
 return M
